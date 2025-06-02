@@ -22,31 +22,24 @@ def num_check(question):
 
 keep_going = ""
 while keep_going == "":
- # Get width and length
- for item in range (0, 2):
+    # Get width and length
     width = num_check("Width: ")
-    print(width)
+    length = num_check("Length: ")
+    cost = num_check("Cost: ")
 
- for item in range(0, 2):
-      length = num_check("Length: ")
-      print(length)
 
- for item in range(0, 2):
-      cost = num_check("Cost: ")
-      print(cost)
+    # Calculate perimeter and price for fence
+    perimeter = 2 * (width + length)
+    price = perimeter * cost
 
- # Calculate perimeter and price for fence
- perimeter = 2 * (width + length)
- price = perimeter * cost
+    # Output the area / perimeter
+    print()
+    print(f"Perimeter: {perimeter} meters ")
+    print(f"Price: ${price:.2f}")
 
- # Output the area / perimeter
- print()
- print(f"Perimeter: {perimeter} meters ")
- print(f"Price: ${price:.2f}")
+    # Ask user if they want to keep going
+    keep_going = input("Press enter to keep going or any key to quit. ")
+    print()
 
- # Ask user if they want to keep going
- keep_going = input("Press enter to keep going or any key to quit. ")
- print()
-
- print("Thank you for using the area / perimeter calculator")
- print()
+    print("Thank you for using the area / perimeter calculator")
+    print()
